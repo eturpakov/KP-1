@@ -1,0 +1,207 @@
+ body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        p{
+           color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;  
+        }
+
+        nav ul li.active a {
+  text-decoration: underline;
+}
+
+#navTree {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+#navTree ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#navTree li {
+    margin: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+#navTree a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    position: relative;
+}
+
+#navTree a:hover {
+    background-color: #f8f9fa;
+    border-bottom-color: #3498db;
+    color: #2980b9;
+}
+
+#navTree a.active {
+    background-color: #65d76d;
+    border-bottom-color: #21f32f;
+    color: #010101;
+    font-weight: 600;
+}
+
+#navTree li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    background-color: #e1e5e9;
+}
+
+#navTree li:last-child::after {
+    display: none;
+}
+
+#navTree a:hover::before,
+#navTree a.active::before {
+    background-color: #2196f3;
+    transform: scale(1.2);
+}
+
+#navTree a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #2196f3;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+#navTree a:hover::after {
+    width: 80%;
+}
+
+#navTree.centered ul {
+    justify-content: center;
+}
+
+#navTree.right-aligned ul {
+    justify-content: flex-end;
+}
+
+#navTree.justified ul {
+    justify-content: space-around;
+}
+
+#navTree.justified li {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #navTree {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #navTree a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        .upper {
+            background-color: #e8f6f3;
+            border: 1px solid #1abc9c;
+            color: #16a085;
+        }
+        .lower {
+            background-color: #e8f4fd;
+            border: 1px solid #3498db;
+            color: #2980b9;
+        }
+        .side {
+            background-color: #fef9e7;
+            border: 1px solid #f1c40f;
+            color: #d35400;
+        }

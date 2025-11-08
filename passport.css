@@ -1,0 +1,151 @@
+.passport {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+p {
+    font-size: 32px;
+}
+
+nav ul li.active a {
+  text-decoration: underline;
+}
+
+#navTree {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+#navTree ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#navTree li {
+    margin: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+#navTree a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    position: relative;
+}
+
+#navTree a:hover {
+    background-color: #f8f9fa;
+    border-bottom-color: #3498db;
+    color: #2980b9;
+}
+
+#navTree a.active {
+    background-color: #65d76d;
+    border-bottom-color: #21f32f;
+    color: #010101;
+    font-weight: 600;
+}
+
+/* Разделители между пунктами */
+#navTree li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    background-color: #e1e5e9;
+}
+
+/* Убрать разделитель у последнего элемента */
+#navTree li:last-child::after {
+    display: none;
+}
+
+#navTree a:hover::before,
+#navTree a.active::before {
+    background-color: #2196f3;
+    transform: scale(1.2);
+}
+
+/* Анимация при наведении */
+#navTree a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #2196f3;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+#navTree a:hover::after {
+    width: 80%;
+}
+
+/* Для выравнивания по центру */
+#navTree.centered ul {
+    justify-content: center;
+}
+
+/* Для выравнивания по правому краю */
+#navTree.right-aligned ul {
+    justify-content: flex-end;
+}
+
+/* Равномерное распределение пунктов */
+#navTree.justified ul {
+    justify-content: space-around;
+}
+
+#navTree.justified li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #navTree {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #navTree a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    /* Скрыть разделители на мобильных */
+    #navTree li::after {
+        display: none;
+    }
+}
